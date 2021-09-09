@@ -37,6 +37,9 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
+                        @if(Session::has('message'))
+                           <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+                        @endif
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -58,9 +61,10 @@
                                        
                                         <td class="d-flex">
                                             <a href="{{route('admin.edit_service_category',['category_id'=>$scategory->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i> </a>
-                                            <form action="#" class="mr-1" >                                             
+                                            <form action="#" class="mr-1" onclick="confirm('Are you sure,you want to delete this service category!') || event.stopImmediatePropagation()" wire:click.prevent="deleteServiceCategory({{$scategory->id}})">                                             
                                                 <button type="submit" class="btn btn-sm btn-danger"> <i class="fas fa-trash"></i> </button>
                                             </form>
+                                            {{-- <a href="#" onclick="confirm('Are you sure,you want to delete this service category!') || event.stopImmediatePropagation()" wire:click.prevent="deleteServiceCategory({{$scategory->id}})"><i class="fas fa-trash"></i> </a> --}}
                                         </td>
                                     </tr>
                             @endforeach       
