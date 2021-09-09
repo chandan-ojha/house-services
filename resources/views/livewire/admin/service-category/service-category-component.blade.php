@@ -32,7 +32,7 @@
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <h3 class="card-title">Service Categories List</h3>
-                            <a href="#" class="btn btn-primary">Create Service Category</a>
+                            <a href="{{route('admin.add_service_category')}}" class="btn btn-primary">Create Service Category</a>
                         </div>
                     </div>
                     <!-- /.card-header -->
