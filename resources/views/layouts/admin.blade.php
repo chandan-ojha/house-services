@@ -178,10 +178,10 @@
             </a>
           </li>
           <li class="nav-item mt-auto">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.service_categories')}}" class="nav-link">
               <i class="nav-icon fas fa-tags"></i>
               <p>
-                Categories
+                Service Categories
               </p>
             </a>                    
           </li>
