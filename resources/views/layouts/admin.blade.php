@@ -173,7 +173,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                User Management
+                Users
               </p>
             </a>
           </li>
@@ -181,15 +181,15 @@
             <a href="{{route('admin.service_categories')}}" class="nav-link">
               <i class="nav-icon fas fa-tags"></i>
               <p>
-                Service Categories
+                Categories
               </p>
             </a>                    
           </li>
           <li class="nav-item mt-auto">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.all_services')}}" class="nav-link">
               <i class="nav-icon fas fa-pen-square"></i>
               <p>
-                Post
+                Service
               </p>
             </a>                    
           </li>
