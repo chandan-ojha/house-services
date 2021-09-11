@@ -72,10 +72,9 @@
                                         <td>{{$service->created_at}}</td>
                                         <td class="d-flex">
                                             <a href="{{route('admin.edit_service',['service_slug'=>$service->slug])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i> </a>
-                                            <form action="#" class="mr-1">                                             
+                                            <form  class="mr-1" onclick="confirm('Are you sure,you want to delete this service !') || event.stopImmediatePropagation()" wire:click.prevent="deleteService({{$service->id}})">                                             
                                                 <button type="submit" class="btn btn-sm btn-danger"> <i class="fas fa-trash"></i> </button>
                                             </form>
-                                            {{-- <a href="#" onclick="confirm('Are you sure,you want to delete this service category!') || event.stopImmediatePropagation()" wire:click.prevent="deleteServiceCategory({{$scategory->id}})"><i class="fas fa-trash"></i> </a> --}}
                                         </td>
                                     </tr>
                             @endforeach       
