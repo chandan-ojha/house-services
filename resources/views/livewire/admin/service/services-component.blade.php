@@ -71,7 +71,7 @@
                                         <td>{{$service->category->name}}</td>
                                         <td>{{$service->created_at}}</td>
                                         <td class="d-flex">
-                                            <a href="#" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i> </a>
+                                            <a href="{{route('admin.edit_service',['service_slug'=>$service->slug])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i> </a>
                                             <form action="#" class="mr-1">                                             
                                                 <button type="submit" class="btn btn-sm btn-danger"> <i class="fas fa-trash"></i> </button>
                                             </form>

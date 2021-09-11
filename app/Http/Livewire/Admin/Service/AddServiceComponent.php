@@ -80,7 +80,7 @@ class AddServiceComponent extends Component
 
         $imageName2 = Carbon::now()->timestamp. '.' . $this->image->extension();
         $this->image->storeAs('services',$imageName2);
-        $service->image = $this->image;
+        $service->image = $imageName2;
 
         $service->save();
         session()->flash('message','Service has been created successfully!');
