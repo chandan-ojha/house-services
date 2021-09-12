@@ -81,7 +81,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="discount_type">Discount</label>
+                                            <label for="discount_type">Discount Type</label>
                                             <select class="form-control" wire:model="discount_type" >
                                                 <option value="">Select Discount Type</option>
                                                 <option value="fixed">Fixed</option>
@@ -89,6 +89,15 @@
                                             </select>
                                             @error('discount_type') <p class="text-danger">{{$message}}</p> @enderror
                                         </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="discount_type">Featured</label>
+                                            <select class="form-control" wire:model="featured" >
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
+                                        </div>
+
 
                                         <div class="form-group">
                                             <label for="description">Description</label>

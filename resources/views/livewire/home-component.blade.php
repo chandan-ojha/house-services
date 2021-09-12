@@ -59,62 +59,22 @@
                         </div>
                     </div>
                     <div class="portfolioContainer" style="margin-top: -50px;">
+                        @foreach($fservices as  $service)
                         <div class="col-xs-6 col-sm-4 col-md-3 hsgrids" style="padding-right: 5px;padding-left: 5px;">
-                            <a class="g-list" href="service-details/ac-dry-servicing.html">
+                            <a class="g-list" href="{{route('home.service_details',['service_slug'=>$service->slug])}}">
                                 <div class="img-hover">
-                                    <img src="{{ asset('images/services/thumbnails/thumbnail.jpg') }}" alt="AC Dry Servicing" class="img-responsive">
+                                    <img src="{{ asset('images/services/thumbnails') }}/{{$service->thumbnail}}" alt="{{$service->name}}" class="img-responsive">
                                 </div>
                                 <div class="info-gallery">
-                                    <h3>AC Dry Servicing</h3>
+                                    <h3>{{$service->name}}</h3>
                                     <hr class="separator">
-                                    <p>AC Dry Servicing</p>
-                                    <div class="content-btn"><a href="service-details/ac-dry-servicing.html" class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><span>&#36;</span><b>From</b>300</div>
+                                    <p>{{$service->tagline}}</p>
+                                    <div class="content-btn"><a href="{{route('home.service_details',['service_slug'=>$service->slug])}}" class="btn btn-primary">Book Now</a></div>
+                                    <div class="price"><span>&#36;</span><b>From</b>{{$service->price}}</div>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-6 col-sm-4 col-md-3 hsgrids" style="padding-right: 5px;padding-left: 5px;">
-                            <a class="g-list" href="service-details/ac-installation.html">
-                                <div class="img-hover">
-                                    <img src="{{ asset('images/services/thumbnails/thumbnail.jpg') }}" alt="AC Installation" class="img-responsive">
-                                </div>
-                                <div class="info-gallery">
-                                    <h3>AC Installation</h3>
-                                    <hr class="separator">
-                                    <p>AC Installation</p>
-                                    <div class="content-btn"><a href="service-details/ac-installation.html" class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><span>&#36;</span><b>From</b>320</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-3 hsgrids" style="padding-right: 5px;padding-left: 5px;">
-                            <a class="g-list" href="service-details/ac-gas-top-up.html">
-                                <div class="img-hover">
-                                    <img src="{{ asset('images/services/thumbnails/thumbnail.jpg') }}" alt="AC Gas Top Up" class="img-responsive">
-                                </div>
-                                <div class="info-gallery">
-                                    <h3>AC Gas Top Up</h3>
-                                    <hr class="separator">
-                                    <p>AC Gas Top Up</p>
-                                    <div class="content-btn"><a href="service-details/ac-gas-top-up.html" class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><span>&#36;</span><b>From</b>320</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-3 hsgrids" style="padding-right: 5px;padding-left: 5px;">
-                            <a class="g-list" href="service-details/ac-gas-refill.html">
-                                <div class="img-hover">
-                                    <img src="{{ asset('images/services/thumbnails/thumbnail.jpg') }}" alt="AC Gas Refill" class="img-responsive">
-                                </div>
-                                <div class="info-gallery">
-                                    <h3>AC Gas Refill</h3>
-                                    <hr class="separator">
-                                    <p>AC Gas Refill</p>
-                                    <div class="content-btn"><a href="service-details/ac-gas-refill.html" class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><span>&#36;</span><b>From</b>510</div>
-                                </div>
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
