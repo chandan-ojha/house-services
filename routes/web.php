@@ -9,7 +9,9 @@ use App\Http\Livewire\Admin\Service\ServicesComponent;
 use App\Http\Livewire\Admin\ServiceCategory\AddServiceCategoryComponent;
 use App\Http\Livewire\Admin\ServiceCategory\EditServiceCategoryComponent;
 use App\Http\Livewire\Admin\ServiceCategory\ServiceCategoryComponent;
-
+use App\Http\Livewire\Admin\Slide\AddSlideComponent;
+use App\Http\Livewire\Admin\Slide\EditSlideComponent;
+use App\Http\Livewire\Admin\Slide\SliderComponent;
 //For Customer
 use App\Http\Livewire\Customer\CustomerDashboardComponent;
 use App\Http\Livewire\HomeComponent;
@@ -60,4 +62,7 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/{category_slug}/services',AdminServicesByCategoryComponent::class)->name('admin.services_by_category');
     Route::get('/admin/service/add',AddServiceComponent::class)->name('admin.add_service');
     Route::get('/admin/service/edit/{service_slug}',EditServiceComponent::class)->name('admin.edit_service');
+    Route::get('/admin/slider',SliderComponent::class)->name('admin.slider');
+    Route::get('/admin/slide/add',AddSlideComponent::class)->name('admin.add_slide');
+    Route::get('/admin/slide/edit/{slide_id}',EditSlideComponent::class)->name('admin.edit_slide');
 });

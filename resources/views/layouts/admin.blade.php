@@ -169,6 +169,7 @@
               </p>
             </a>
           </li>
+
           <li class="nav-item mt-auto">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
@@ -177,6 +178,7 @@
               </p>
             </a>
           </li>
+
           <li class="nav-item mt-auto">
             <a href="{{route('admin.service_categories')}}" class="nav-link">
               <i class="nav-icon fas fa-tags"></i>
@@ -185,6 +187,7 @@
               </p>
             </a>                    
           </li>
+
           <li class="nav-item mt-auto">
             <a href="{{route('admin.all_services')}}" class="nav-link">
               <i class="nav-icon fas fa-pen-square"></i>
@@ -193,6 +196,7 @@
               </p>
             </a>                    
           </li>
+
           <li class="nav-item mt-auto">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
@@ -201,6 +205,16 @@
               </p>
             </a>                    
           </li>
+
+          <li class="nav-item mt-auto">
+            <a href="{{route('admin.slider')}}" class="nav-link">
+            <i class="nav-icon fas fa-pen-square"></i>
+              <p>
+                Manage Slider
+              </p>
+            </a>                    
+          </li>
+
           <li class="nav-item mt-auto">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
@@ -209,6 +223,7 @@
               </p>
             </a>
           </li>
+
           <li class="nav-header">Your Account</li>
           <li class="nav-item mt-auto">
             <a href="#" class="nav-link">
@@ -218,6 +233,7 @@
               </p>
             </a>
           </li>
+
           <li class="nav-item mt-auto">     
             <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link">
             <i class="nav-icon fas fa-sign-out-alt"></i>   
@@ -226,6 +242,7 @@
                </p>
             </a>
           </li>
+          
           <form id="logout-form" method="POST" action="{{route('logout')}}" style="display: none;">
            @csrf
           </form>
