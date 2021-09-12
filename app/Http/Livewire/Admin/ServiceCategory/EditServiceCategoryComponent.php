@@ -16,6 +16,7 @@ class EditServiceCategoryComponent extends Component
     public $slug;
     public $image;
     public $newimage;
+    public $featured;
 
     public function mount($category_id)
     {
@@ -24,6 +25,7 @@ class EditServiceCategoryComponent extends Component
        $this->name = $scategory->name;
        $this->slug = $scategory->slug;
        $this->image = $scategory->image;
+       $this->featured = $scategory->featured;
     }
 
     public function generateSlug()
@@ -70,6 +72,7 @@ class EditServiceCategoryComponent extends Component
             $this->newimage->storeAs('categories',$imageName);
             $scategory->image = $imageName;
         }
+        $scategory->featured = $this->featured;
         $scategory->save();
         session()->flash('message','Category has been updated successfully!');
     }

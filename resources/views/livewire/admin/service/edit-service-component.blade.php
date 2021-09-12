@@ -91,7 +91,7 @@
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label for="discount_type">Featured</label>
+                                            <label for="featured">Featured</label>
                                             <select class="form-control" wire:model="featured" >
                                                 <option value="0">No</option>
                                                 <option value="1">Yes</option>

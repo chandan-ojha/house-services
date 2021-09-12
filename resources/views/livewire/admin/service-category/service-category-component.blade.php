@@ -47,6 +47,7 @@
                                     <th>Image</th>
                                     <th>Name</th>
                                     <th>Slug</th>
+                                    <th>Featured</th>
                                     <th style="width: 40px">Action</th>
                                 </tr>
                             </thead>
@@ -58,6 +59,13 @@
                                          <td><img src="{{asset('images/categories')}}/{{$scategory->image}}" width="60"/> </td>
                                          <td>{{$scategory->name}}</td>
                                          <td>{{$scategory->slug}}</td>
+                                         <td>
+                                             @if($scategory->featured)
+                                                 Yes
+                                             @else
+                                                 No
+                                             @endif
+                                         </td>
                                        
                                         <td class="d-flex">
                                             <a href="{{route('admin.services_by_category',['category_slug'=>$scategory->slug])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-list"></i> </a>

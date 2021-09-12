@@ -57,7 +57,16 @@
                                             @else
                                               <img src="{{asset('images/categories')}}/{{$image}}" width="60" />
                                             @endif
-                                        </div>                                        
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <label for="featured">Featured</label>
+                                            <select class="form-control" wire:model="featured" >
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
+                                        </div>
+
                                     </div>
                                     <div class="card-footer">
                                         <button type="submit" class="btn btn-lg btn-primary">Update Category</button>
