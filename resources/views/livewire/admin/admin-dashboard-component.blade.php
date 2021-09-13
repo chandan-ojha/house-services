@@ -27,7 +27,7 @@
                 <div class="inner">
                   <h3>50</h3>
 
-                  <p>Posts</p>
+                  <p>Services</p>
                 </div>
                 <div class="icon">
                   <i class="fas fa-pen-square"></i>
@@ -55,7 +55,7 @@
                 <div class="inner">
                   <h3>5</h3>
 
-                  <p>Tags</p>
+                  <p>Book Services</p>
                 </div>
                 <div class="icon">
                   <i class="fas fa-tag"></i>
@@ -83,8 +83,8 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h3 class="card-title">Post List</h3>
-                            <a href="#" class="btn btn-primary">Post List</a>
+                            <h3 class="card-title">Service List</h3>
+                            <a href="#" class="btn btn-primary">Service List</a>
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -92,12 +92,13 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th style="width: 10px">Id</th>
+                                    <th style="width: 10px">#</th>
                                     <th>Image</th>
-                                    <th>Title</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Status</th>
+                                    <th>Featured</th>
                                     <th>Category</th>
-                                    <th>Tags</th>
-                                    <th>Author</th>
                                     <th>Created Date</th>
                                     <th style="width: 40px">Action</th>
                                 </tr>
@@ -109,13 +110,12 @@
                                    <img src="#" class="img-fluid img-rounded" alt="">
                                  </div>
                                 </td>
-                                <td>Computer</td>
-                                <td>Electronics</td>
-                                <td>                                       
-                                  <span class="badge badge-primary">Electronics</span>                                          
-                                </td>
-                                <td>Chandan Ojha</td>
-                                <td>06 Sep, 2021</td>
+                                <td>voluptas commodi nihil dolores</td>
+                                <td>500.00</td>
+                                <td>Active</td>
+                                <td>Yes</td>
+                                <td>Category</td>
+                                <td>2021-09-10 04:04:05</td>
                                 <td class="d-flex">
                                             <a href="#" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i> </a>
                                             <a href="#" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i> </a>

@@ -15,6 +15,7 @@ use App\Http\Livewire\Admin\ServiceCategory\ServiceCategoryComponent;
 use App\Http\Livewire\Admin\Slide\AddSlideComponent;
 use App\Http\Livewire\Admin\Slide\EditSlideComponent;
 use App\Http\Livewire\Admin\Slide\SliderComponent;
+use App\Http\Livewire\Admin\UserManagementComponent;
 use App\Http\Livewire\ChangeLocationComponent;
 
 //For Customer
@@ -88,4 +89,5 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/slide/add',AddSlideComponent::class)->name('admin.add_slide');
     Route::get('/admin/slide/edit/{slide_id}',EditSlideComponent::class)->name('admin.edit_slide');
     Route::get('/admin/contacts',AdminContactComponent::class)->name('admin.contacts');
+    Route::get('/admin/all-users',UserManagementComponent::class)->name('admin.all_users');
 });

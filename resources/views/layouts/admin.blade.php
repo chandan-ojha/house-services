@@ -162,7 +162,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.dashboard')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard   
@@ -171,7 +171,7 @@
           </li>
 
           <li class="nav-item mt-auto">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.all_users')}}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Users
