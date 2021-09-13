@@ -1,6 +1,8 @@
 <?php
 
 //For Admin
+
+use App\Http\Controllers\SearchController;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\Service\AddServiceComponent;
 use App\Http\Livewire\Admin\Service\AdminServicesByCategoryComponent;
@@ -41,6 +43,10 @@ Route::get('/', HomeComponent::class)->name('home');
 Route::get('/service-categories',ServiceCategoriesComponent::class)->name('home.service_categories');
 Route::get('/{category_slug}/services',ServicesByCategoryComponent::class)->name('home.services_by_category');
 Route::get('service/{service_slug}',ServiceDetailsComponent::class)->name('home.service_details');
+
+//for search
+Route::get('/autocomplete',[SearchController::class,'autocomplete'])->name('autocomplete');
+Route::post('/search',[SearchController::class,'searchService'])->name('searchService');
 
 //For Customer
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
