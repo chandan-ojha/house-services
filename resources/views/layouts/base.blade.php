@@ -124,6 +124,7 @@
                                 <li class="login-form"> <a href="#" title="Register">My Account (S Provider)</a>
                                   <ul class="drop-down one-column hover-fade">
                                      <li><a href="{{route('sprovider.dashboard')}}">Dashboard</a></li>
+                                     <li><a href="{{route('sprovider.profile')}}">Profile</a></li>
                                      <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                    </ul>
                                </li>
