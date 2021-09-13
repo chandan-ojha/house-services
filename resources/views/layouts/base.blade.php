@@ -239,7 +239,7 @@
                         <div class="col-md-6">
                             <ul class="nav-footer">
                                 <li><a href="about-us.html">About Us</a> </li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="{{route('home.contact')}}">Contact Us</a></li>
                                 <li><a href="faq.html">FAQ</a></li>
                                 <li><a href="terms-of-use.html">Terms of Use</a></li>
                                 <li><a href="privacy.html">Privacy</a></li>

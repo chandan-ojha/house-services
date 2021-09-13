@@ -3,6 +3,7 @@
 //For Admin
 
 use App\Http\Controllers\SearchController;
+use App\Http\Livewire\Admin\AdminContactComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\Service\AddServiceComponent;
 use App\Http\Livewire\Admin\Service\AdminServicesByCategoryComponent;
@@ -15,6 +16,7 @@ use App\Http\Livewire\Admin\Slide\AddSlideComponent;
 use App\Http\Livewire\Admin\Slide\EditSlideComponent;
 use App\Http\Livewire\Admin\Slide\SliderComponent;
 use App\Http\Livewire\ChangeLocationComponent;
+
 //For Customer
 use App\Http\Livewire\Customer\CustomerDashboardComponent;
 use App\Http\Livewire\HomeComponent;
@@ -23,9 +25,13 @@ use App\Http\Livewire\ServiceDetailsComponent;
 use App\Http\Livewire\ServicesByCategoryComponent;
 use App\Http\Livewire\Sprovider\Profile\EditSproviderProfileComponent;
 use App\Http\Livewire\Sprovider\Profile\SproviderProfileComponent;
+
+use App\Http\Livewire\ContactComponent;
+
 //For Service Provider
 use App\Http\Livewire\Sprovider\SproviderDashboardComponent;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +60,8 @@ Route::post('/search',[SearchController::class,'searchService'])->name('searchSe
 //location
 Route::get('/change-location',ChangeLocationComponent::class)->name('home.change_location');
 
+Route::get('/contact-us',ContactComponent::class)->name('home.contact');
+
 //For Customer
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('/customer/dashboard',CustomerDashboardComponent::class)->name('customer.dashboard');
@@ -79,4 +87,5 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/slider',SliderComponent::class)->name('admin.slider');
     Route::get('/admin/slide/add',AddSlideComponent::class)->name('admin.add_slide');
     Route::get('/admin/slide/edit/{slide_id}',EditSlideComponent::class)->name('admin.edit_slide');
+    Route::get('/admin/contacts',AdminContactComponent::class)->name('admin.contacts');
 });

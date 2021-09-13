@@ -198,7 +198,7 @@
           </li>
 
           <li class="nav-item mt-auto">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.contacts')}}" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Messages
